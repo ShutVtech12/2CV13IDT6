@@ -118,7 +118,20 @@ public class Dinamismo extends HttpServlet {
                     break;
                 case "Article":
                     out.println("<center><h1>Etiqueta Article</h1>");
-                    
+                    out.println("Crea tu propio art&iacute;culo</center>");
+                    out.println("<form method='post' action='Resultados'>");
+                    out.println("<div class='mb-3'>");
+                    out.println("<label for='titulo' class='form-label'>Titulo</label>");
+                    out.println("<input type='text' class='form-control' id='titulo' name='titulo'>");
+                    out.println("</div>");
+                    out.println("<div class='mb-3'>");
+                    out.println("<label for='contenido' class='form-label'>Contenido</label>");
+                    out.println("<input type='text' class='form-control' id='contenido' name='contenido'>");
+                    out.println("</div>");
+                    out.println("<div class='mb-3'>");
+                    out.println("<label for='derechos' class='form-label'>Derechos</label>");
+                    out.println("<input type='text' class='form-control' id='derechos' name='derechos'>");
+                    out.println("</div>");
                     
                     
                     out.println("<div align='center'>");
@@ -128,8 +141,13 @@ public class Dinamismo extends HttpServlet {
                     break;
                 case "Audio":
                     out.println("<center><h1>Etiqueta Audio</h1>");
-                    
-                    
+                    out.println("Reproduce un audio</center>");
+                    out.println("<form method='post' action='Resultados'>");
+                    out.println("<div class='mb-3' align='center'>");
+                    out.println("<input type='radio'  name='opcion' value='Risas'/> Risas");
+                    out.println("<input type='radio'  name='opcion' value='Llanto'/> Llanto");
+                    out.println("<input type='radio'  name='opcion' value='Awww'/> Awww");
+                    out.println("</div>");
                     
                     out.println("<div align='center'>");
                     out.println("<button type='submit' class='btn btn-primary'>Enviar</button>");
@@ -138,7 +156,13 @@ public class Dinamismo extends HttpServlet {
                     break;
                 case "Video":
                     out.println("<center><h1>Etiqueta Video</h1>");
-                    
+                    out.println("Reproduce un video</center>");
+                    out.println("<form method='post' action='Resultados'>");
+                    out.println("<div class='mb-3' align='center'>");
+                    out.println("<p><input type='radio'  name='opcion' value='Resumen'/> Resumen de Noticias Videojuegos</p>");
+                    out.println("<p><input type='radio'  name='opcion' value='MiChamarra'/> Escena Eliminada Avengers</p>");
+                    out.println("<p><input type='radio'  name='opcion' value='Halo'/> Halo Infinite Trailer</p>");
+                    out.println("</div>");
                     
                     
                     out.println("<div align='center'>");

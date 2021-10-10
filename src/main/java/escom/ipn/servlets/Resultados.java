@@ -63,7 +63,15 @@ public class Resultados extends HttpServlet {
                     break;
                 case "Article":
                     out.println("<center><h1>Resultados de la etiqueta Article</h1></center>");
-                    
+                    out.println("<article>");
+                    out.println("<header>");
+                    out.println("<h1>"+request.getParameter("titulo")+"</h1>");
+                    out.println("</header>");
+                    out.println("<p>"+request.getParameter("contenido")+"</p>");
+                    out.println("<footer>");
+                    out.println("<p>&copy"+request.getParameter("derechos")+"</p>");
+                    out.println("</footer>");
+                    out.println("</article>");
                     
                     out.println("<div align='center'>");
                     out.println("<a class='btn btn-primary' href="+request.getContextPath()+">Menu Principal</button>");
@@ -72,17 +80,22 @@ public class Resultados extends HttpServlet {
                     break;
                 case "Audio":
                     out.println("<center><h1>Resultados de la etiqueta Audio</h1></center>");
-                    
-                    
                     out.println("<div align='center'>");
-                    out.println("<a class='btn btn-primary' href="+request.getContextPath()+">Menu Principal</button>");
+                    out.println("<audio src='"+request.getParameter("opcion")+".mp3' controls>");
+                    out.println("Este es un elemento de audio no soportado por tu navegador, prueba con otro");
+                    out.println("</audio>");
+                    out.println("</div>");
+                    out.println("<div align='center'>");
+                    out.println("<a class='btn btn-primary' href=" + request.getContextPath() + ">Menu Principal</button>");
                     out.println("<a class='nav-link active' aria-current='page' href='javascript: history.go(-1)'>Regresar</a>");
                     out.println("</div>");
                     break;
+
                 case "Video":
                     out.println("<center><h1>Resultados de la etiqueta Video</h1></center>");
-                    
-                    
+                    out.println("<div align='center'>");
+                    out.println("<video src='"+request.getParameter("opcion")+".mp4' controls></video>");
+                    out.println("</div>");
                     out.println("<div align='center'>");
                     out.println("<a class='btn btn-primary' href="+request.getContextPath()+">Menu Principal</button>");
                     out.println("<a class='nav-link active' aria-current='page' href='javascript: history.go(-1)'>Regresar</a>");
