@@ -130,8 +130,11 @@ public class Resultados extends HttpServlet {
                     break;
                 case "Embed":
                     out.println("<center><h1>Resultados de la etiqueta Embed</h1></center>");
-                    
-                    
+                    out.println("<div align='center'>");
+                    out.println("<iframe width='"+request.getParameter("ancho")+"' height='"+request.getParameter("largo")+"' src='https://www.youtube.com/embed/EHaIrTQg-c4'"+
+                            " title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write;"+
+                            "encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
+                    out.println("</div>");
                     out.println("<div align='center'>");
                     out.println("<a class='btn btn-primary' href="+request.getContextPath()+">Menu Principal</button>");
                     out.println("<a class='nav-link active' aria-current='page' href='javascript: history.go(-1)'>Regresar</a>");

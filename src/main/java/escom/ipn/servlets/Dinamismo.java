@@ -202,7 +202,16 @@ public class Dinamismo extends HttpServlet {
                     break;
                 case "Embed":
                     out.println("<center><h1>Etiqueta Embed</h1>");
-                    
+                    out.println("Modifica el tamaño del video</center>");
+                    out.println("<form method='post' action='Resultados'>");
+                    out.println("<div class='mb-3'>");
+                    out.println("<label for='ancho' class='form-label'>Ancho del video</label>");
+                    out.println("<input type='number' class='form-control' id='ancho' name='ancho'>");
+                    out.println("</div>");
+                    out.println("<div class='mb-3'>");
+                    out.println("<label for='largo' class='form-label'>Largo del video</label>");
+                    out.println("<input type='number' class='form-control' id='largo' name='largo'>");
+                    out.println("</div>");
                     
                     
                     out.println("<div align='center'>");
