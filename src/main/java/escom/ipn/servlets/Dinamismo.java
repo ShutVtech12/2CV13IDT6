@@ -251,8 +251,14 @@ public class Dinamismo extends HttpServlet {
                     break;
                 case "Progress":
                     out.println("<center><h1>Etiqueta Progress</h1>");
+                    out.println("Imprime una barra de progeso con un progreso fijo");
+                    out.println("<form method='post' action='Resultados'>");
+                    out.println("<div class='mb-3' align='center'>");
+                    out.println("¿Qué porcentaje quieres que tenga tu barra de proceso?<br>");
+                    out.println("<input type='text' name='progress'/><br>");
+                    out.println("</div>");
                     
-                    
+                    out.println("");
                     
                     out.println("<div align='center'>");
                     out.println("<button type='submit' class='btn btn-primary'>Enviar</button>");
@@ -261,7 +267,14 @@ public class Dinamismo extends HttpServlet {
                     break;
                 case "Source":
                     out.println("<center><h1>Etiqueta Source</h1>");
+                    out.println("Se usa para poder abrir archivos multimedia mediante su ruta");
+                    out.println("<form method='post' action='Resultados'>");
+                    out.println("<div class='mb-3' align='center'>");
+                    out.println("Escribe la ruta/link de una imagen para pdoer abrirla<br>");
+                    out.println("<input type='text' name='source'/><br>");
+                    out.println("</div>");
                     
+                    out.println("");
                     
                     
                     out.println("<div align='center'>");
@@ -271,7 +284,14 @@ public class Dinamismo extends HttpServlet {
                     break;
                 case "Textarea":
                     out.println("<center><h1>Etiqueta Textarea</h1>");
+                    out.println("Se usa para ingrresar texto, en su mayoria reseñas,comentarios, entre otros");
+                    out.println("<form method='post' action='Resultados'>");
+                    out.println("<div class='mb-3' align='center'>");
+                    out.println("num filas: <input type='text' name='textFil'/><br>");
+                    out.println("num columnas: <input type='text' name='textCol'/><br>");
+                    out.println("</div>");
                     
+                    out.println("");
                     
                     
                     out.println("<div align='center'>");
