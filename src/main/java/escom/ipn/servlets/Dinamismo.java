@@ -172,7 +172,20 @@ public class Dinamismo extends HttpServlet {
                     break;
                 case "Cite":
                     out.println("<center><h1>Etiqueta Cite</h1>");
-                    
+                    out.println("Crea tu propia Cita Textual</center>");
+                    out.println("<form method='post' action='Resultados'>");
+                    out.println("<div class='mb-3'>");
+                    out.println("<label for='cita' class='form-label'>Titulo</label>");
+                    out.println("<input type='text' class='form-control' id='cita' name='cita'>");
+                    out.println("</div>");
+                    out.println("<div class='mb-3'>");
+                    out.println("<label for='autor' class='form-label'>Autor</label>");
+                    out.println("<input type='text' class='form-control' id='autor' name='autor'>");
+                    out.println("</div>");
+                    out.println("<div class='mb-3'>");
+                    out.println("<label for='year' class='form-label'>Año</label>");
+                    out.println("<input type='number' class='form-control' id='year' name='year'>");
+                    out.println("</div>");
                     
                     
                     out.println("<div align='center'>");
@@ -182,8 +195,16 @@ public class Dinamismo extends HttpServlet {
                     break;
                 case "Command":
                     out.println("<center><h1>Etiqueta Command</h1>");
-                    
-                    
+                    out.println("Selecciona un tipo y escribe su nombre</center>");
+                    out.println("<form method='post' action='Resultados'>");
+                    out.println("<div class='mb-3' align='center'>");
+                    out.println("<p><input type='radio'  name='opcion' value='checkbox'/> Checkbox</p>");
+                    out.println("<p><input type='radio'  name='opcion' value='radio'/> Radio</p>");
+                    out.println("</div>");
+                    out.println("<div class='mb-3' align='center'>");
+                    out.println("<label for='titu' class='form-label'>Nombre que tendr&aacute; el objeto</label>");
+                    out.println("<input type='text' class='form-control' id='titu' name='titu'>");
+                    out.println("</div>");
                     
                     out.println("<div align='center'>");
                     out.println("<button type='submit' class='btn btn-primary'>Enviar</button>");
@@ -192,7 +213,13 @@ public class Dinamismo extends HttpServlet {
                     break;
                 case "Div":
                     out.println("<center><h1>Etiqueta Div</h1>");
-                    
+                    out.println("Escoge una alineaci&oacute;n</center>");
+                    out.println("<form method='post' action='Resultados'>");
+                    out.println("<div class='mb-3' align='center'>");
+                    out.println("<p><input type='radio'  name='opcion' value='left'/> Izquierda</p>");
+                    out.println("<p><input type='radio'  name='opcion' value='right'/> Derecha</p>");
+                    out.println("<p><input type='radio'  name='opcion' value='center'/> Centrado</p>");
+                    out.println("</div>");
                     
                     
                     out.println("<div align='center'>");

@@ -103,8 +103,15 @@ public class Resultados extends HttpServlet {
                     break;
                 case "Cite":
                     out.println("<center><h1>Resultados de la etiqueta Cite</h1></center>");
-                    
-                    
+                    out.println("<cite>");
+                    out.println("<header>");
+                    out.println("<h1>"+request.getParameter("cita")+"</h1>");
+                    out.println("</header>");
+                    out.println("<p>"+request.getParameter("autor")+"</p>");
+                    out.println("<footer>");
+                    out.println("<p>&copy"+Integer.parseInt(request.getParameter("year"))+"</p>");
+                    out.println("</footer>");
+                    out.println("</article>");
                     out.println("<div align='center'>");
                     out.println("<a class='btn btn-primary' href="+request.getContextPath()+">Menu Principal</button>");
                     out.println("<a class='nav-link active' aria-current='page' href='javascript: history.go(-1)'>Regresar</a>");
@@ -112,8 +119,11 @@ public class Resultados extends HttpServlet {
                     break;
                 case "Command":
                     out.println("<center><h1>Resultados de la etiqueta Command</h1></center>");
-                    
-                    
+                    out.println(request.getParameter("opcion"));
+                    out.println(request.getParameter("titu"));
+                    out.println("<menu>");
+                    out.println("<command type='"+request.getParameter("opcion")+"' label='"+request.getParameter("titu")+"'>El navegador no soporta command");
+                    out.println("</menu>");
                     out.println("<div align='center'>");
                     out.println("<a class='btn btn-primary' href="+request.getContextPath()+">Menu Principal</button>");
                     out.println("<a class='nav-link active' aria-current='page' href='javascript: history.go(-1)'>Regresar</a>");
@@ -121,7 +131,11 @@ public class Resultados extends HttpServlet {
                     break;
                 case "Div":
                     out.println("<center><h1>Resultados de la etiqueta Div</h1></center>");
-                    
+                    out.println("<div class='mb-3' align='"+request.getParameter("opcion")+"'>");
+                    out.println("<p>Esta es una prueba de texto que no tiene ningun otro fin</p>");
+                    out.println("<p>Mas que mostrar el poderoso e increible poder que tiene la etiqueta div</p>");
+                    out.println("<p>A un texto con el atributo de align ocupandolo. :D</p>");
+                    out.println("</div>");
                     
                     out.println("<div align='center'>");
                     out.println("<a class='btn btn-primary' href="+request.getContextPath()+">Menu Principal</button>");
