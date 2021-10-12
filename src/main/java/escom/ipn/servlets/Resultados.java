@@ -169,6 +169,10 @@ public class Resultados extends HttpServlet {
                     break;
                 case "Progress":
                     out.println("<center><h1>Resultados de la etiqueta Progress</h1></center>");
+                    out.println("<div align='center'>");
+                    out.println("<progress value='"+request.getParameter("progress")+"' max='100'> </progress>");
+                    out.println("</div>");
+                    
                     
                     
                     out.println("<div align='center'>");
@@ -178,7 +182,9 @@ public class Resultados extends HttpServlet {
                     break;
                 case "Source":
                     out.println("<center><h1>Resultados de la etiqueta Source</h1></center>");
-                    
+                    out.println("<div align='center'>");
+                    out.println("<img src='"+request.getParameter("source")+"' alt=\"Imagencita\">");
+                    out.println("</div>");
                     
                     out.println("<div align='center'>");
                     out.println("<a class='btn btn-primary' href="+request.getContextPath()+">Menu Principal</button>");
@@ -187,7 +193,7 @@ public class Resultados extends HttpServlet {
                     break;
                 case "Textarea":
                     out.println("<center><h1>Resultados de la etiqueta Textarea</h1></center>");
-                    
+                    out.println("\"<h2>Este es tu TextArea<br><textarea id='textito' name='Atexto' rows="+request.getParameter("textFil")+" cols="+request.getParameter("textCol")+">Text area creada Hola mundo</textarea>");
                     
                     out.println("<div align='center'>");
                     out.println("<a class='btn btn-primary' href="+request.getContextPath()+">Menu Principal</button>");
