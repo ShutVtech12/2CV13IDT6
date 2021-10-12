@@ -142,28 +142,60 @@ public class Resultados extends HttpServlet {
                     break;
                 case "Img":
                     out.println("<center><h1>Resultados de la etiqueta Img</h1></center>");
-                    
-                    
+                    int largo,
+                     ancho;
+                    String imagen;
+                    largo = Integer.parseInt(request.getParameter("largoi"));
+                    ancho = Integer.parseInt(request.getParameter("anchoi"));
+                    imagen = request.getParameter("imagen");
+                    out.print("<img src= '" + imagen + "' width= '" + ancho + "' heightt= '" + largo + "' >");
+
                     out.println("<div align='center'>");
-                    out.println("<a class='btn btn-primary' href="+request.getContextPath()+">Menu Principal</button>");
+                    out.println("<a class='btn btn-primary' href=" + request.getContextPath() + ">Menu Principal</button>");
                     out.println("<a class='nav-link active' aria-current='page' href='javascript: history.go(-1)'>Regresar</a>");
                     out.println("</div>");
                     break;
                 case "Menu":
                     out.println("<center><h1>Resultados de la etiqueta Menu</h1></center>");
-                    
-                    
+
+                    int o,
+                     x;
+                    o = Integer.parseInt(request.getParameter("nopc"));
+                    out.println("<H2>Ejemplo de menu con los reactivos dados </H2>");
+                    out.print("<menu>");
+                    for (x = 1; x <= o; x++) {
+                        out.print("<l1> * Elemento numero  " + x + " </li>");
+                        out.print("<br>");
+                    }
+                    out.print("</menu>");
                     out.println("<div align='center'>");
-                    out.println("<a class='btn btn-primary' href="+request.getContextPath()+">Menu Principal</button>");
+                    out.println("<a class='btn btn-primary' href=" + request.getContextPath() + ">Menu Principal</button>");
                     out.println("<a class='nav-link active' aria-current='page' href='javascript: history.go(-1)'>Regresar</a>");
                     out.println("</div>");
                     break;
                 case "Object":
                     out.println("<center><h1>Resultados de la etiqueta Object</h1></center>");
-                    
-                    
+
+                    String selctor,
+                     largoo,
+                     anchoo;
+                    selctor = request.getParameter("selector");
+                    largoo = request.getParameter("largoo");
+                    anchoo = request.getParameter("anchoo");
+                    if (selctor.equals("1")) {
+                        out.println("<object data='bob.gif' width='" + anchoo + "' height='" + largoo + "'></object>");
+                    } else {
+                        if (selctor.equals("2")) {
+                            out.println("<object data='a.html' width='" + anchoo + "' height='" + largoo + "'></object>");
+                        } else {
+                            if (selctor.equals("3")) {
+                                out.println("<object data='gato.mp4' width='" + anchoo + "' height='" + largoo + "'></object>");
+                            }
+                        }
+                    }
+
                     out.println("<div align='center'>");
-                    out.println("<a class='btn btn-primary' href="+request.getContextPath()+">Menu Principal</button>");
+                    out.println("<a class='btn btn-primary' href=" + request.getContextPath() + ">Menu Principal</button>");
                     out.println("<a class='nav-link active' aria-current='page' href='javascript: history.go(-1)'>Regresar</a>");
                     out.println("</div>");
                     break;

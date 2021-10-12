@@ -221,9 +221,14 @@ public class Dinamismo extends HttpServlet {
                     break;
                 case "Img":
                     out.println("<center><h1>Etiqueta Img</h1>");
-                    
-                    
-                    
+                    out.println("<H2> Ingresa la imagen gif (bob) </H2>");
+
+                    out.println("<form name='dinamo' method='post'  action='Resultados'>");
+                    out.println("<input type='text'  name='imagen'  placeholder='Ingresa bob.gif'>");
+                    out.println("<H2> Ingresa el ancho y largo  </H2>");
+                    out.println("<input type='number'  name='anchoi'  placeholder='Ancho Imagen'>");
+                    out.println("<input type='number'  name='largoi'  placeholder='Largo Imagen'>");
+
                     out.println("<div align='center'>");
                     out.println("<button type='submit' class='btn btn-primary'>Enviar</button>");
                     out.println("<a class='nav-link active' aria-current='page' href='javascript: history.go(-1)'>Regresar</a>");
@@ -231,9 +236,10 @@ public class Dinamismo extends HttpServlet {
                     break;
                 case "Menu":
                     out.println("<center><h1>Etiqueta Menu</h1>");
-                    
-                    
-                    
+                    out.println("<H2> Ingresa cuantas opciones va a tener el menu </H2>");
+                    out.println("<form name='dinamo' method='post'  action='Resultados'>");
+                    out.println("<input type='number' class='form-control' name='nopc' placeholder='Reactivos del menu'>");
+
                     out.println("<div align='center'>");
                     out.println("<button type='submit' class='btn btn-primary'>Enviar</button>");
                     out.println("<a class='nav-link active' aria-current='page' href='javascript: history.go(-1)'>Regresar</a>");
@@ -241,9 +247,15 @@ public class Dinamismo extends HttpServlet {
                     break;
                 case "Object":
                     out.println("<center><h1>Etiqueta Object</h1>");
-                    
-                    
-                    
+                    out.println("<H2> En este caso tenemos 3 tipos selecciona el tipo que gustes   </H2>");
+                    out.println(" <form method='post'  action='Resultados'>");
+                    out.println("<input type=\"radio\"  name='selector' value='1' checked=\"checked\"/> imagen <br>");
+                    out.println("<input type=\"radio\"  name='selector' value='2' />  html  <br>");
+                    out.println("<input type=\"radio\"  name='selector' value='3'/> video ");
+                    out.println("<br> ");
+                    out.println("<input type='number'  name='anchoo'  placeholder='Ancho Objeto'>");
+                    out.println("<input type='number'  name='largoo'  placeholder='Largo Objeto'>");
+
                     out.println("<div align='center'>");
                     out.println("<button type='submit' class='btn btn-primary'>Enviar</button>");
                     out.println("<a class='nav-link active' aria-current='page' href='javascript: history.go(-1)'>Regresar</a>");
