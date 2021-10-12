@@ -232,8 +232,16 @@ public class Resultados extends HttpServlet {
                     break;
                 case "Source":
                     out.println("<center><h1>Resultados de la etiqueta Source</h1></center>");
+                    out.println("cambie el tamño de su navegador para ver diferentes imagenes<br>");
                     out.println("<div align='center'>");
-                    out.println("<img src='"+request.getParameter("source")+"' alt=\"Imagencita\">");
+                    out.println("<picture>");
+                    out.println("<source media='(min-width:850px)' srcset='"+request.getParameter("source1")+".jpg'>");
+                    out.println("<source media='(min-width:650px)' srcset='"+request.getParameter("source2")+".jpg'>");
+                    out.println("<img src='"+request.getParameter("source3")+".jpg' alt='img3' style='width:auto;'>");
+                    //out.println("<img src='"+request.getParameter("source1")+"' alt='Imagen'><br>");
+                    //out.println("<img src='"+request.getParameter("source3")+"' alt='video'><br>");
+                    out.println("</picture>");
+                    
                     out.println("</div>");
                     
                     out.println("<div align='center'>");
