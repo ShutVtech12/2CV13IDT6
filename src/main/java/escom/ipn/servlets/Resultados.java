@@ -148,8 +148,9 @@ public class Resultados extends HttpServlet {
                     largo = Integer.parseInt(request.getParameter("largoi"));
                     ancho = Integer.parseInt(request.getParameter("anchoi"));
                     imagen = request.getParameter("imagen");
+                    out.println("<div align='center'>");
                     out.print("<img src= '" + imagen + "' width= '" + ancho + "' heightt= '" + largo + "' >");
-
+                    out.println("</div>");
                     out.println("<div align='center'>");
                     out.println("<a class='btn btn-primary' href=" + request.getContextPath() + ">Menu Principal</button>");
                     out.println("<a class='nav-link active' aria-current='page' href='javascript: history.go(-1)'>Regresar</a>");
@@ -161,13 +162,15 @@ public class Resultados extends HttpServlet {
                     int o,
                      x;
                     o = Integer.parseInt(request.getParameter("nopc"));
+                    out.println("<div align='center'>");
                     out.println("<H2>Ejemplo de menu con los reactivos dados </H2>");
                     out.print("<menu>");
                     for (x = 1; x <= o; x++) {
-                        out.print("<l1> * Elemento numero  " + x + " </li>");
+                        out.print("<l1>* Elemento numero  " + x + " </li>");
                         out.print("<br>");
                     }
                     out.print("</menu>");
+                    out.println("</div>");
                     out.println("<div align='center'>");
                     out.println("<a class='btn btn-primary' href=" + request.getContextPath() + ">Menu Principal</button>");
                     out.println("<a class='nav-link active' aria-current='page' href='javascript: history.go(-1)'>Regresar</a>");
@@ -182,6 +185,7 @@ public class Resultados extends HttpServlet {
                     selctor = request.getParameter("selector");
                     largoo = request.getParameter("largoo");
                     anchoo = request.getParameter("anchoo");
+                    out.println("<div align='center'>");
                     if (selctor.equals("1")) {
                         out.println("<object data='bob.gif' width='" + anchoo + "' height='" + largoo + "'></object>");
                     } else {
@@ -193,7 +197,7 @@ public class Resultados extends HttpServlet {
                             }
                         }
                     }
-
+                    out.println("</div>");
                     out.println("<div align='center'>");
                     out.println("<a class='btn btn-primary' href=" + request.getContextPath() + ">Menu Principal</button>");
                     out.println("<a class='nav-link active' aria-current='page' href='javascript: history.go(-1)'>Regresar</a>");
@@ -225,8 +229,9 @@ public class Resultados extends HttpServlet {
                     break;
                 case "Textarea":
                     out.println("<center><h1>Resultados de la etiqueta Textarea</h1></center>");
-                    out.println("\"<h2>Este es tu TextArea<br><textarea id='textito' name='Atexto' rows="+request.getParameter("textFil")+" cols="+request.getParameter("textCol")+">Text area creada Hola mundo</textarea>");
-                    
+                    out.println("<div align='center'>");
+                    out.println("<h2>Este es tu TextArea<br><textarea id='textito' name='Atexto' rows="+request.getParameter("textFil")+" cols="+request.getParameter("textCol")+">Text area creada Hola mundo</textarea>");
+                    out.println("</div>");
                     out.println("<div align='center'>");
                     out.println("<a class='btn btn-primary' href="+request.getContextPath()+">Menu Principal</button>");
                     out.println("<a class='nav-link active' aria-current='page' href='javascript: history.go(-1)'>Regresar</a>");
