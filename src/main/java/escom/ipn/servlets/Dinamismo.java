@@ -279,11 +279,15 @@ public class Dinamismo extends HttpServlet {
                     break;
                 case "Source":
                     out.println("<center><h1>Etiqueta Source</h1>");
-                    out.println("Se usa para poder abrir archivos multimedia mediante su ruta");
+                    out.println("Se usa para poder abrir multiples archivos multimedia mediante su ruta");
                     out.println("<form method='post' action='Resultados'>");
                     out.println("<div class='mb-3' align='center'>");
-                    out.println("Escribe la ruta/link de una imagen para pdoer abrirla<br>");
-                    out.println("<input type='text' name='source'/><br>");
+                    out.println("Escribe el nombre de una imagen para poder abrirla<br>");
+                    out.println("<input type='text' name='source1'/><br>");
+                    out.println("Escribe el nombre de una imagen para poder abrirla<br>");
+                    out.println("<input type='text' name='source2'/><br>");
+                    out.println("Escribe el nombre de una imagen para poder abrirla<br>");
+                    out.println("<input type='text' name='source3'/><br>");
                     out.println("</div>");
                     
                     out.println("");
