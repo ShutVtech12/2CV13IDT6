@@ -41,7 +41,7 @@ public class Dinamismo extends HttpServlet {
             out.println("<div class='container'>");
             switch(opc){
                 case "Area":
-                    out.println("<center><h1>Etiqueta area</h1>");
+                    out.println("<center><h1>ALLALALA area</h1>");
                     out.println("<img src='Figuras2.jpg'></center>");
                     out.println("<form class='row g-3' method='post' action='Resultados'>");
                     
